@@ -32,13 +32,13 @@
       <div class="collapse navbar-collapse custom-nav" id="navbarNav">
         <ul class="navbar-nav me-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">O nas</a>
+            <a class="nav-link active" aria-current="page" href="#about">O nas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cennik</a>
+            <a class="nav-link" href="#prices">Cennik</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Kontakt</a>
+            <a class="nav-link" href="#contact">Kontakt</a>
           </li>
 
         </ul>
@@ -54,35 +54,33 @@
     <div class="header-image">
       <img src="images/pexels-rachel-claire-5490778.jpg" class="img" alt="header-image">
     </div>
-    <p class="geader-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit maxime asperiores incidunt
-      harum repudiandae accusantium earum voluptatum suscipit, perspiciatis non dignissimos reprehenderit quasi, laborum
-      dolores ducimus ea fugiat dolorem?</p>
+    <p class="header-text"><span>Relaksacyjny masaż ASMR </span> - dla tych, którzy cenią doświadczenie zmysłowe,
+      łączące dźwięki i dotyk w jednym magicznym zabiegu</p>
   </header>
 
 
 
-  <div class="container-fluid about-box">
+  <div class="container-fluid about-box" id="about">
     <div class="row custom-row">
+
       <div class="col grid-section">
-        <h2 class="about-header">lorem</h2>
-        <div class="about-img">
-          <img src="images/wlosy.jpg" alt="" class="img">
-        </div>
-        <p class="about-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt ea iure consequuntur
-          nostrum blanditiis dolorem ipsam dolore facere molestias!</p>
-      </div>
-      <div class="col grid-section">
-        <h2 class="about-header">lorem</h2>
+        <h2 class="about-header">Czym jest ASMR? </h2>
         <div class="about-img">
           <img src="images/pani-kwiatek.jpg" alt="" class="img">
         </div>
-        <p class="about-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt ea iure consequuntur
-          nostrum blanditiis dolorem ipsam dolore facere molestias!</p>
+        <p class="about-content">ASMR (Autonomous Sensory Meridian Response) to zjawisko opisujące przyjemne uczucie mrowienia lub dreszczy, zazwyczaj w okolicy głowy, ale i w różnych partiach ciała, które występuje w odpowiedzi na stymulację zmysłów, często w formie dźwięków , dotyku, wizualnych bodźców. Osoby doświadczające ASMR opisują to uczucie jako relaksujące i uspokajające.</p>
       </div>
       <div class="col grid-section">
-        <h2 class="about-header">lorem</h2>
+        <h2 class="about-header">Nasza misja</h2>
         <div class="about-img">
           <img src="images/pudla.jpg" alt="" class="img">
+        </div>
+        <p class="about-content">Nasza misja to dostarczanie usług, które skupiają się na relaksie, uspokojeniu umysłu i redukcji napięcia ciała. <br> Wykorzystujemy techniki ASMR, dźwięki, wrażenia wizualne i dotyk, aby stworzyć wyjątkowe doświadczenia, które pomagają naszym klientom uwolnić stres i odnaleźć spokój w biegu codziennego życia. <br> Nasze usługi mają na celu zapewnić chwilę relaksu, odprężenia i przyjemności, wspierając równocześnie dobre samopoczucie psychiczne i fizyczne.</p>
+      </div>
+      <div class="col grid-section">
+        <h2 class="about-header">Co mogę zyskać dzięki ASMR?</h2>
+        <div class="about-img">
+          <img src="images/wlosy.jpg" alt="" class="img">
         </div>
         <p class="about-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt ea iure consequuntur
           nostrum blanditiis dolorem ipsam dolore facere molestias!</p>
@@ -176,7 +174,7 @@
   </section>
 
 
-  <section class="prices">
+  <section class="prices" id="prices">
     <div class="accordion accordion-flush" id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingOne">
@@ -228,32 +226,40 @@
 
 
 
-  <section class="contact">
-    <div class="form-box">
+  <section class="contact" id="contact">
+    <div class="contact-box">
       <div class="img-contact flex-item">
         <img src="images/pexels-alena-shekhovtcova-7036537.jpg" alt="kwiatek" class="img">
       </div>
       <div class="form-box  flex-item">
-        <form action="" class="form">
-          <label for="name">Imie i nazwisko</label>
-          <input type="text">
-          <label for="email">Imie i nazwisko</label>
-          <input type="email">
-          <label for="massage">Imie i nazwisko</label>
-          <textarea name="massage"  cols="60" rows="4"></textarea>
+        <h3>Skontaktuj się przez formularz lub bezpośrednio używając adresu <span> e-mail</span> lub <span> telefou
+            kontaktowego</span> pod formularzem :)</h3>
+        <form action="https://formspree.io/f/xnqenpbo" method="POST" class="form">
+          <label>Imie i nazwisko</label>
+          <input type="text" name="name" class="name">
+          <label>E-mail</label>
+          <input type="email" name="email" class="email">
+          <label>Wiadomość</label>
+          <textarea name="massage" class="massage" cols="60" rows="4"></textarea>
 
-          <label for="service">Choose a service:</label>
-          <select name="service" id="service">
-            <option value="volvo">Pakiet spa</option>
-            <option value="saab">Pakiet medyczny</option>
-            <option value="saab">Pakiet intensywny dźwiekowy</option>
-            <option value="mercedes">Pakiet dziecięcy</option>
-            <option value="audi">Pakiet dla 2</option>
+          <label for="service">Wybierz pakiet o który Cie interesuje </label>
+          <select name="service" class="service" id="service">
+            <option value="Pakiet spa">Pakiet spa</option>
+            <option value="Pakiet medyczny">Pakiet medyczny</option>
+            <option value="Pakiet intensywny dźwiekowy">Pakiet intensywny dźwiekowy</option>
+            <option value="Pakiet dziecięcy">Pakiet dziecięcy</option>
+            <option value="Pakiet dla 2">Pakiet dla 2</option>
+            <option value="Jeszcze sie nie zdecydowałem/am">Jeszcze sie nie zdecydowałem/am</option>
           </select>
 
-          <input type="submit" class="submit" value="Wyślij">
+          <button type="submit" class="submit">Wyślij</button>
+
         </form>
+        <p class="success"></p>
       </div>
+
+
+
     </div>
   </section>
 
@@ -261,11 +267,11 @@
 
   <footer class="footer">
     <div class="contactData">
-      <p class="data-par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, necessitatibus!</p>
+      <p class="info">Dane kontaktowe</p>
+      <p class="email">E-mail: <span>thegoodbrain.office@int.pl</span> </p>
+      <p class="tel">Telefon : <span> +48 530 605 559</span></p>
     </div>
-    <div class="social-media">
-      <span>Hello</span>
-    </div>
+    <p class="rights">© 2024 TheGoodBrain, Inc.</p>
   </footer>
 
 
