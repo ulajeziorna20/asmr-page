@@ -1,0 +1,303 @@
+body {
+  box-sizing: border-box;
+}
+
+
+.custom-nav {
+  flex-direction: row-reverse;
+  margin-right: 20px;
+  height: 40px;
+}
+
+.custom-color {
+  background-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-item {
+  margin-right: 90px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 1.2em;
+}
+
+.navbar-brand img {
+  width: 250px;
+  border: 2px solid black;
+  position: absolute;
+  z-index: 9999;
+}
+
+.header-image {
+  position: relative;
+  /* Ustaw pozycję na relative, aby umożliwić pozycjonowanie wewnętrznych elementów */
+  overflow: hidden;
+  height: 700px;
+  border-bottom: 2px solid black;
+}
+
+
+.header-image .img {
+  height: 100% !important;
+  width: 100%;
+
+}
+
+.geader-text {
+  background-color: white;
+  width: 450px;
+  position: absolute;
+  padding: 20px;
+  top: 230px;
+  right: 200px;
+  color: black;
+  font-size: 1.3em;
+  font-weight: 700;
+  border: 2px solid black;
+}
+
+
+.about-box {
+
+  background-color: rgba(72,163,179,255);
+}
+
+.custom-row {
+  padding: 30px;
+}
+
+.grid-section {
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.about-img {
+  text-align: center;
+  margin: 50px 10px;
+}
+
+.about-img img {
+  width: 350px;
+  border: 2px solid black;
+
+}
+
+.about-content {
+  font-size: larger;
+  text-align: center;
+  color: white;
+  margin-bottom: 150px;
+}
+
+.about-header {
+  text-align: center;
+  color: white;
+}
+
+.exp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-box {
+  flex-basis: 33%;
+  overflow: hidden;
+  height: 290px;
+}
+
+.long {
+  height: 500px;
+}
+
+.img-box img {
+  width: 100%;
+
+}
+
+
+
+
+
+
+
+.main-header-services {
+ text-align: center;
+  padding-top: 120px;
+  color: rgba(72,163,179,255);
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+.custom-services {
+  background-color: rgba(231, 187, 170, 255);
+}
+
+
+.img-services.top {
+  margin-top: 200px;
+}
+
+.img-services.bottom {
+  margin-bottom: 200px;
+}
+
+
+.img-services img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.services-content-box.top {
+  margin-top: 200px;
+}
+
+.services-content-box.bottom {
+  margin-bottom: 200px;
+}
+
+.header-services,
+.content-services {
+  text-align: center;
+
+}
+
+.header-services {
+  padding-top: 60px;
+  color:  black;
+  font-size: 2.5em;
+  font-weight: bold;
+
+}
+
+.content-services {
+  width: 500px;
+  margin: 80px auto;
+}
+
+
+.prices {
+  background-image: url('../images/massage-therapy-1612308_1280.jpg');
+  background-size: cover;
+  /* Dostosuj rozmiar obrazu do wielkości ekranu */
+  background-repeat: no-repeat;
+  /* Zapobiegnij powtarzaniu obrazu */
+  background-position: center;
+  height: 620px;
+  padding-top: 150px;
+}
+
+
+.accordion {
+  width: 900px;
+  margin: auto;
+
+}
+
+.accordion-button {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: #f5f6f7;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: gray;
+  background-color: #f5f6f7;
+  text-decoration: underline;
+}
+
+.accordion-body {
+  color: gray;
+  text-align: center;
+}
+
+hr {
+  width: 40%;
+  padding-bottom: 15px;
+}
+
+/* usuniecie bootstrapowej strzałki */
+.accordion-button::after {
+  content: none;
+}
+
+
+.form-box {
+  height: 689px;
+}
+
+
+.form-box {
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex-basis: 48%;
+}
+
+.form {
+  padding: 60px 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  margin-top: 15px;
+  font-size: larger;
+  font-style: italic;
+}
+
+label,
+input {
+  flex-basis: 100%;
+}
+
+
+textarea {
+  resize: none
+}
+
+
+select {
+  margin-bottom: 20px;
+}
+
+input.submit {
+ 
+  background-color: rgba(72,163,179,255) ;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+input.submit:hover {
+  background-color: rgba(87, 127, 184, 255);
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.img-contact {
+  height: 100%;
+}
+
+.img-contact img {
+  object-fit: cover;
+  height: 100%;
+  border: 2px solid black;
+}
+
+
+.footer {
+  height: 200px;
+  background-color: black;
+}
