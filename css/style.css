@@ -57,7 +57,7 @@ body {
   box-shadow: 0 0 40px rgb(255, 255, 255);
   text-align: center;
   background-color: white;
-  width: 650px;
+  width: 700px;
   position: absolute;
   padding: 50px;
   top: 230px;
@@ -71,25 +71,26 @@ body {
 
 .header-text:hover {
   box-shadow: none;
- 
+
 }
 
 
-.header-text  span {
-  color: rgba(72, 163, 179, 255);
-  text-decoration: underline;
+.header-text span {
+  color: rgba(92, 150, 187, 255);
+  font-size: 1.4em;
+  /* text-decoration: underline; */
 }
 
 .about-box {
 
-  background-color: rgba(72, 163, 179, 255);
+  background-color: rgba(92, 150, 187, 255);
 }
 
 .custom-row {
   padding: 30px;
 }
 
-.about-box > h2 {
+.about-box>h2 {
   padding-top: 50px;
   margin: auto;
   color: white;
@@ -110,10 +111,32 @@ body {
   box-shadow: 0 0 40px rgb(255, 255, 255);
 }
 
+.about-img:hover {
+  box-shadow: 0 0 70px rgb(255, 255, 255);
+}
+
 .about-img img {
   width: 350px;
   border: 2px solid black;
 
+}
+
+
+
+.about-header {
+  font-style: italic;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  height: 50px;
+  width: 400px;
+  margin: auto;
+  font-size: 2.1em;
+  transition: all 0.5s;
+}
+
+.about-header:hover {
+  color: rgba(1, 62, 99, 0.897);
 }
 
 .about-content {
@@ -127,24 +150,20 @@ body {
 
 
 .about-content span {
-  color: rgba(18,35,122,255);
+  /* rgba(239,213,229,255) */
+  color: rgba(1, 62, 99, 0.897);
+  text-decoration: underline;
   font-weight: bolder;
+  font-style: italic;
+  transition: all 0.5s;
 }
 
-.about-header {
+.about-content span:hover {
+  /* rgba(239,213,229,255) */
+  color: rgba(8, 92, 144, 0.897);
 
-  text-align: center;
-  color:  rgba(18,35,122,255);
-  font-weight: bolder;
-  height: 50px;
-  width:400px;
-  margin: auto;
-  font-size: 2.1em;
 }
 
-.about-header:hover {
-color: rgb(0, 0, 235);
-}
 
 .exp {
   display: flex;
@@ -155,17 +174,36 @@ color: rgb(0, 0, 235);
 .img-box {
   flex-basis: 33.3%;
   overflow: hidden;
-  height: 290px;
- 
+  height: 350px;
+  transition: all 0.5s;
+
+}
+
+.img-box:hover {
+  box-shadow: 0 0 130px rgb(255, 255, 255);
 }
 
 .long {
-  height: 500px;
+  height: 600px;
 }
 
 .img-box img {
   width: 100%;
 
+
+}
+
+.img-box.custom {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-box .img-custom {
+  position: absolute;
+  width: 130%;
+  height: 100%;
+  left: -50px;
+  /* object-fit: cover; */
 
 }
 
@@ -178,13 +216,14 @@ color: rgb(0, 0, 235);
 .main-header-services {
   text-align: center;
   padding-top: 120px;
-  color: rgba(18,35,122,255);
-  font-size: 3.5em;
+  color: rgba(92, 150, 187, 255);
+  font-size: 2.6em;
   font-weight: bold;
+  font-style: italic;
 }
 
 .custom-services {
-  background-color: rgba(231, 187, 170, 255);
+  background-color: rgba(246, 235, 220, 255);
 }
 
 
@@ -200,7 +239,7 @@ color: rgb(0, 0, 235);
 .img-services img {
   width: 100%;
   border-radius: 50%;
-  border: 4px solid rgba(72, 163, 179, 255);
+  border: 4px solid rgba(92, 150, 187, 255);
 }
 
 .services-content-box.top {
@@ -208,11 +247,47 @@ color: rgb(0, 0, 235);
 }
 
 .services-content-box {
-  margin-top: 60px;
+  margin-top: 100px;
+  height: 450px;
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  transition: all 0.5s;
 }
 
-.services-content-box.bottom {
-  margin-bottom: 100px;
+.services-content-box:hover {
+  box-shadow: 0 0 70px rgb(255, 255, 255);
+}
+
+/* .services-content-box.bottom {
+  margin-bottom: 50px;
+} */
+
+.services-content-box .btn {
+  display: block;
+  margin: auto;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  transition: all 1s;
+ 
+}
+
+.services-content-box .btn:hover {
+ background-color:  rgba(92, 150, 187, 255);
+ 
+}
+
+
+.services-content-box .btn a{
+  color: black;
+  text-decoration: none;
+
+}
+
+.services-content-box .btn:hover a {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+
 }
 
 .header-services,
@@ -223,16 +298,19 @@ color: rgb(0, 0, 235);
 
 .header-services {
   padding-top: 60px;
-  color: rgba(18,35,122,255);
+  color: rgba(92, 150, 187, 255);
   font-size: 2.5em;
   font-weight: bold;
 
 }
 
 .content-services {
-  width: 500px;
-  margin: 80px auto;
+  width: 550px;
+  margin: 50px auto;
+  font-size: larger;
 }
+
+
 
 
 .prices {
@@ -250,7 +328,7 @@ color: rgb(0, 0, 235);
 .accordion {
   width: 900px;
   margin: auto;
-  border: 4px solid rgba(72, 163, 179, 255);
+  border: 4px solid rgba(92, 150, 187, 255);
 
 }
 
@@ -300,7 +378,7 @@ hr {
 }
 
 .form-box h3 span {
- color: rgba(72, 163, 179, 255);
+  color: rgba(92, 150, 187, 255);
 }
 
 
@@ -339,14 +417,14 @@ select {
 
 button.submit {
 
-  background-color: rgba(231, 187, 170, 255);
+  background-color: rgba(92, 150, 187, 255);
   border: none;
   color: white;
   border-radius: 5px;
 }
 
 button.submit:hover {
-  background-color: rgba(72, 163, 179, 255);
+  background-color: rgb(23, 98, 130);
   border: none;
   color: white;
   border-radius: 5px;
@@ -359,14 +437,14 @@ button.submit:hover {
 .img-contact img {
   object-fit: cover;
   height: 100%;
-  border: 4px solid rgba(72, 163, 179, 255);
+  border: 4px solid rgba(92, 150, 187, 255);
 }
 
 
 .footer {
   position: relative;
   height: 300px;
-  background-color: rgba(72, 163, 179, 255);
+  background-color: rgba(92, 150, 187, 255);
   padding-top: 30px;
 }
 
@@ -394,5 +472,5 @@ button.submit:hover {
   position: absolute;
   color: white;
   bottom: 0;
-  right: 750px;
+  right: 950px;
 }
