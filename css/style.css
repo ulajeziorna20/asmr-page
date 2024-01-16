@@ -1,12 +1,13 @@
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 
 .custom-nav {
   flex-direction: row-reverse;
   margin-right: 20px;
-  height: 40px;
+  /* height: 40px; */
 }
 
 .custom-color {
@@ -42,13 +43,13 @@ body {
   position: relative;
   /* Ustaw pozycję na relative, aby umożliwić pozycjonowanie wewnętrznych elementów */
   overflow: hidden;
-  height: 700px;
+  height: 800px;
   border-bottom: 2px solid black;
 }
 
 
 .header-image .img {
-  height: 100% !important;
+  height: 100%;
   width: 100%;
 
 }
@@ -58,6 +59,7 @@ body {
   text-align: center;
   background-color: white;
   width: 700px;
+  min-width: 200px;
   position: absolute;
   padding: 50px;
   top: 230px;
@@ -249,7 +251,7 @@ body {
 .services-content-box {
   margin-top: 100px;
   height: 450px;
-  width: 800px;
+  width: 850px;
   margin-right: auto;
   margin-left: auto;
   transition: all 0.5s;
@@ -269,16 +271,16 @@ body {
   padding-bottom: 10px;
   border: 1px solid black;
   transition: all 1s;
- 
+
 }
 
 .services-content-box .btn:hover {
- background-color:  rgba(92, 150, 187, 255);
- 
+  background-color: rgba(92, 150, 187, 255);
+
 }
 
 
-.services-content-box .btn a{
+.services-content-box .btn a {
   color: black;
   text-decoration: none;
 
@@ -305,8 +307,8 @@ body {
 }
 
 .content-services {
-  width: 550px;
-  margin: 50px auto;
+  width: 650px;
+  margin: 40px auto;
   font-size: larger;
 }
 
@@ -335,10 +337,17 @@ body {
 .accordion-button {
   display: flex;
   height: 100px;
+  font-size: 0.8em;
   justify-content: center;
   align-items: center;
   color: black;
   background-color: #f5f6f7;
+}
+
+
+.accordion-button:hover {
+  text-decoration: underline;
+  color: rgba(92, 150, 187, 255)
 }
 
 .accordion-button:focus {
@@ -354,6 +363,7 @@ body {
 .accordion-body {
   color: gray;
   text-align: center;
+  font-size: larger;
 }
 
 hr {
@@ -473,4 +483,95 @@ button.submit:hover {
   color: white;
   bottom: 0;
   right: 950px;
+}
+
+
+/* media */
+
+@media screen and (max-width: 998px) {
+
+  .wrapper {
+    position: relative;
+
+    height: 800px;
+  }
+
+  .navbar {
+    top: 1;
+    padding: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+
+  }
+
+  .container-fluid.navbar-box {
+    background-color: white;
+    padding-bottom: 15px;
+
+  }
+
+
+  .navbar-brand img {
+    position: absolute;
+    top: 50px;
+    z-index: 999;
+    width: 200px;
+  }
+
+  .navbar-toggler {
+
+    margin-left: 90%;
+    margin-top: 20px;
+  }
+
+  .navbar-light .navbar-nav .nav-item {
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: end;
+  }
+
+  .header-image {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .header-image .img {
+    width: 150%;
+  }
+
+  .header-text {
+    max-width: 400px;
+    font-size: 1.2em;
+    top: 400px;
+    right: 40px;
+  }
+
+  .header-text span {
+    font-size: 1.2em;
+  }
+
+
+  .about-box>h2 {
+    width: auto;
+  }
+
+  .exp .img-box {
+    flex-basis: 100%;
+  }
+
+  .services-content-box {
+    width: auto;
+    /* max-width: 500px; */
+  }
+
+  .content-services {
+    min-width: 400px;
+    width: auto;
+  }
+
 }
