@@ -7,6 +7,12 @@ form.addEventListener('submit', function (event) {
 
   console.log(event);
 
+  let recaptchaResponse = grecaptcha.getResponse();
+  if (!recaptchaResponse) {
+    alert('Proszę potwierdzić, że nie jesteś robotem.');
+    return;
+  }
+
 
   // Wyślij dane do Formspree za pomocą Fetch API lub innej metody
   // Przykład z użyciem Fetch:
@@ -32,7 +38,7 @@ form.addEventListener('submit', function (event) {
 
 
       let massSucc = document.querySelector('.success')
-      massSucc.innerText  = "Sukces! Jak najszybciej skontaktujemy sie z Tobą :) "
+      massSucc.innerText = "Sukces! Jak najszybciej skontaktujemy sie z Tobą :) "
 
 
 
