@@ -1,6 +1,10 @@
-body {
+* {
   box-sizing: border-box;
-  overflow-x: hidden;
+}
+
+body {
+
+  /* overflow-x: hidden; */
 }
 
 
@@ -23,7 +27,7 @@ body {
 }
 
 .navbar-brand img {
-  width: 250px;
+  width: 15vw;
   border: 2px solid black;
   position: absolute;
   z-index: 9999;
@@ -38,12 +42,18 @@ body {
 
 
 
+.header {
+  height: 80vh;
+}
+
 
 .header-image {
+
+  height: 100%;
   position: relative;
   /* Ustaw pozycję na relative, aby umożliwić pozycjonowanie wewnętrznych elementów */
   overflow: hidden;
-  height: 800px;
+  /* height: 800px; */
   border-bottom: 2px solid black;
 }
 
@@ -51,7 +61,7 @@ body {
 .header-image .img {
   height: 100%;
   width: 100%;
-
+  object-fit: cover;
 }
 
 .header-text {
@@ -108,6 +118,7 @@ body {
 }
 
 .about-img {
+  height: 60%;
   text-align: center;
   margin: 50px 10px;
   box-shadow: 0 0 40px rgb(255, 255, 255);
@@ -118,7 +129,9 @@ body {
 }
 
 .about-img img {
-  width: 350px;
+  width: 80%;
+  height: 100%;
+  /* object-fit: cover; */
   border: 2px solid black;
 
 }
@@ -130,8 +143,8 @@ body {
   text-align: center;
   color: white;
   font-weight: bolder;
-  height: 50px;
-  width: 400px;
+  /* height: 50px; */
+  /* width: 400px; */
   margin: auto;
   font-size: 2.1em;
   transition: all 0.5s;
@@ -146,7 +159,7 @@ body {
   font-size: 1.4em;
   text-align: center;
   color: white;
-  width: 400px;
+  width: 80%;
   margin-bottom: 150px;
 }
 
@@ -175,8 +188,8 @@ body {
 
 .img-box {
   flex-basis: 33.3%;
-  overflow: hidden;
-  height: 350px;
+  /* overflow: hidden; */
+  /* height: 100%; */
   transition: all 0.5s;
 
 }
@@ -185,19 +198,21 @@ body {
   box-shadow: 0 0 130px rgb(255, 255, 255);
 }
 
-.long {
-  height: 600px;
+.img-box.custom img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img-box img {
   width: 100%;
-
+  height: 100%;
+  object-fit: cover;
 
 }
 
-.img-box.custom {
-  position: relative;
-  overflow: hidden;
+.img-box.custom img {
+  position: inherit;
 }
 
 .img-box .img-custom {
@@ -245,15 +260,15 @@ body {
 }
 
 .services-content-box.top {
-  margin-top: 150px;
+  /* margin-top: 150px; */
 }
 
 .services-content-box {
   margin-top: 100px;
-  height: 450px;
-  width: 850px;
-  margin-right: auto;
-  margin-left: auto;
+  height: 70%;
+  /* width: 850px; */
+  /* margin-right: auto; */
+  /* margin-left: auto; */
   transition: all 0.5s;
 }
 
@@ -292,6 +307,14 @@ body {
 
 }
 
+
+.content-services {
+  width: 650px;
+  margin: 40px auto;
+  font-size: larger;
+}
+
+
 .header-services,
 .content-services {
   text-align: center;
@@ -306,11 +329,6 @@ body {
 
 }
 
-.content-services {
-  width: 650px;
-  margin: 40px auto;
-  font-size: larger;
-}
 
 
 
@@ -454,27 +472,43 @@ button.submit:hover {
 .footer {
   display: flex;
   flex-wrap: wrap;
-  height: 300px;
+
   background-color: rgba(92, 150, 187, 255);
   padding-top: 30px;
 }
 
 
-span.rev { unicode-bidi:bidi-override; direction:rtl }
-span.rev.email:before { content:"moc." }
-span.rev.email:after { content:"@eciffo.niarbdoogeht :liamE" }
-span.rev.phone:before { content:"955 " }
-span.rev.phone:after { content:" 035 84+ :enohP" }
+span.rev {
+  unicode-bidi: bidi-override;
+  direction: rtl
+}
+
+span.rev.email:before {
+  content: "moc."
+}
+
+span.rev.email:after {
+  content: "@eciffo.niarbdoogeht :liamE"
+}
+
+span.rev.phone:before {
+  content: "955 "
+}
+
+span.rev.phone:after {
+  content: " 035 84+ :enohP"
+}
 
 .contactData {
   color: white;
-  flex-basis: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .contactData p {
   font-size: 1.4em;
   padding-left: 40px;
-  width: 700px;
+  /* width: 700px; */
 }
 
 .contactData .info {
@@ -488,9 +522,10 @@ span.rev.phone:after { content:" 035 84+ :enohP" }
 }
 
 .rights {
-  flex-basis: 100%;
+  width: 100%;
   color: white;
   text-align: center;
+  margin: 0;
 }
 
 
@@ -500,8 +535,7 @@ span.rev.phone:after { content:" 035 84+ :enohP" }
 
   .wrapper {
     position: relative;
-
-    height: 800px;
+    /* height: 800px; */
   }
 
   .navbar {
@@ -524,12 +558,12 @@ span.rev.phone:after { content:" 035 84+ :enohP" }
     position: absolute;
     top: 50px;
     z-index: 999;
-    width: 200px;
+    width: 25vw;
   }
 
   .navbar-toggler {
 
-    margin-left: 90%;
+    margin-left: 80%;
     margin-top: 20px;
   }
 
@@ -574,14 +608,20 @@ span.rev.phone:after { content:" 035 84+ :enohP" }
 
   .services-content-box {
     width: auto;
-    height: 450px;
-    margin-bottom: 50px;
+    height: 100%;
+    padding-bottom: 30px;
+    /* margin-bottom: 50px; */
     /* max-width: 500px; */
   }
 
   .content-services {
-    min-width: 400px;
+
     width: auto;
+  }
+
+  .serv {
+    height: 80%;
+    padding-bottom: 20px;
   }
 
   .about-content {
@@ -594,7 +634,7 @@ span.rev.phone:after { content:" 035 84+ :enohP" }
     max-width: 700px;
   }
 
-  .img-contact img{
+  .img-contact img {
     height: 50%;
     display: none;
     /* padding-top: 200px; */
@@ -610,6 +650,74 @@ span.rev.phone:after { content:" 035 84+ :enohP" }
     margin: 30px auto;
   }
 
-  
+  .contactData {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .contactData p {
+    width: 80%;
+  }
+
+  .g-recaptcha {
+    width: 100%;
+
+  }
+
+  .g-recaptcha div {
+    width: 100%;
+
+  }
 
 }
+
+
+
+
+@media screen and (max-width: 600px) {
+  .img-contact.flex-item {
+    display: none;
+  }
+
+  .form-box.flex-item {
+    width: 100%;
+  }
+
+  .form-box.flex-item h3{
+    padding-left: 15px;
+  }
+
+  .about-img {
+    height: 50vh;
+  }
+
+  .about-img img {}
+
+
+  .main-header-services {
+    font-size: 1.8em;
+  }
+
+  .contactData {
+    padding-bottom: 60px;
+   
+  }
+
+  .contactData .info {
+    font-size: 1.5em;
+   
+  }
+  .contactData p{
+    font-size: 1em;
+   
+  }
+
+    /* .img-box.long {
+    height: 50%;
+  } */
+    /* .form-box.flex-item label,
+  .form-box.flex-item input {
+    width: 40px;
+  } */
+  }
