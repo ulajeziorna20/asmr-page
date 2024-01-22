@@ -118,7 +118,7 @@ body {
 }
 
 .about-img {
-  height: 60%;
+  height: 55%;
   text-align: center;
   margin: 50px 10px;
   box-shadow: 0 0 40px rgb(255, 255, 255);
@@ -129,7 +129,7 @@ body {
 }
 
 .about-img img {
-  width: 80%;
+  width: 85%;
   height: 100%;
   /* object-fit: cover; */
   border: 2px solid black;
@@ -239,7 +239,7 @@ body {
   font-style: italic;
 }
 
-.custom-services {
+.services {
   background-color: rgba(246, 235, 220, 255);
 }
 
@@ -252,6 +252,10 @@ body {
   margin-bottom: 100px;
 }
 
+
+.last {
+  padding-bottom: 100px;
+}
 
 .img-services img {
   width: 100%;
@@ -635,7 +639,7 @@ span.rev.phone:after {
   }
 
   .img-contact img {
-    height: 50%;
+    height: 35%;
     display: none;
     /* padding-top: 200px; */
   }
@@ -676,6 +680,60 @@ span.rev.phone:after {
 
 
 @media screen and (max-width: 600px) {
+
+  .header-text {
+  
+    width: 150px;
+    padding: 20px;
+    top: 250px;
+    right: 30px;
+    font-size: 1em;
+    font-weight: 500;
+   
+  }
+  
+  .about-img {
+    height: 50%;
+  
+  }
+
+  .about-img img {
+    width: 90%;
+    height: 100%;
+    /* object-fit: cover; */
+    border: 2px solid black;
+  
+  }
+
+  .about-content {
+    font-size: 1em;
+  }
+
+  .services-content-box .btn{
+    background-color: rgba(1, 62, 99, 0.897);
+    border: 1px solid  rgba(1, 62, 99, 0.897);
+  
+  }
+  .services-content-box .btn a{
+    color: white;
+    
+  
+  }
+
+
+  .accordion-button {
+    font-size: 0.8em;
+    font-style: italic;
+  }
+
+  .header-services  {
+    font-size: 1.6em;
+  }
+
+  .content-services {
+    font-size: 1em;
+  }
+
   .img-contact.flex-item {
     display: none;
   }
@@ -686,6 +744,8 @@ span.rev.phone:after {
 
   .form-box.flex-item h3{
     padding-left: 15px;
+    font-size: 1.1em;
+    text-align: center;
   }
 
   .about-img {
@@ -711,6 +771,14 @@ span.rev.phone:after {
   .contactData p{
     font-size: 1em;
    
+  }
+
+  .services-content-box {
+    margin-top: 10px;
+  }
+
+  .last {
+    margin-bottom: 60px;
   }
 
     /* .img-box.long {

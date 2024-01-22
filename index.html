@@ -12,9 +12,18 @@
 
 
   <!-- ReCaptcha -->
-
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+  <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LdR_VIpAAAAABoKFSI3MhqxmlPPkOFI8TGNq-Q6"></script> -->
+
+  <script>
+    // grecaptcha.ready(function () {
+    //   grecaptcha.execute('6LdR_VIpAAAAABoKFSI3MhqxmlPPkOFI8TGNq-Q6', { action: 'submit' }).then(function (token) {
+    //     console.info("got token: " + token);
+    //     document.getElementById('g-recaptcha-response').value = token;
+    //   });
+    // });
+  </script>
   <!-- custom styles -->
 
   <link rel="stylesheet" href="css/style.css">
@@ -149,10 +158,18 @@
 
   <section class="services" id="services">
     <div class="container-fluid">
+
+      <h2 class="main-header-services">Badanie wzroku? Przymiarki odzieży? Masaż twarzy? Mierzenie całego
+        ciała, a może ... <br> Rodzaje sesji ASMR</h2>
+
       <div class="row custom-services">
-        <h2 class="main-header-services">Badanie wzroku? Przymiarki odzieży? Masaż twarzy? Mierzenie całego
-          ciała, a może ... <br> Rodzaje sesji ASMR</h2>
-        <div class="col-lg-12 col-xl-6 order-xl-1 order-md-2 order-lg-6 serv">
+
+        <div class="col-12 col-lg-12 col-2 col-xl-6 order-xl-2 serv">
+          <div class="img-services top">
+            <img src="images/brush-set-4573248_1280.jpg" alt="" class="img">
+          </div>
+        </div>
+        <div class="col-12 col-lg-12 col-1 col-xl-5 order-xl-1 serv">
           <div class="services-content-box top">
             <h3 class="header-services ">
               Sesja o charakterze kosmetycznym
@@ -162,34 +179,19 @@
               głowy, doznasz imitacji przymiarki ubrań, pielęgnacji włosów, pielęgnacji ciała, aury i innych. Wszystko
               przy pomocy różnych wyzwalaczy i technik ASMR. Elementem sesji jest również masaż całego ciała za pomocą
               fizjoterapeutycznego masażera marki VITBERG</p>
-            <button class="btn"><a href="">Sprawdź szczegóły </a></button>
+            <button class="btn"><a href="#cosmetic">Sprawdź szczegóły </a></button>
           </div>
 
         </div>
-        <div class="col-lg-12 col-xl-6 order-xl-2 order-md-1 order-lg-1 serv">
-          <div class="img-services top">
-            <img src="images/brush-set-4573248_1280.jpg" alt="" class="img">
-          </div>
-        </div>
-        <div class="col-lg-12 col-xl-6  order-xl-5 order-md-6 order-lg-4 serv">
-          <div class="services-content-box">
-            <h3 class="header-services">
-              Sesja dla dzieci
-            </h3>
-            <p class="content-services">Dla naszych najmlodszych zabieganych i ciekawych świata mamy opcję, która jest
-              syntezą wybranych elementów pakietu kosmetycznego i medycznego. Stawiamy na wyzwalacze, które zaciekawią,
-              zrelaksują i pomogą się dziecku wyciszyć. Każdy młodszy uczestnik ma zapewnione indywidualne podejście,
-              któro zwieksza u niego poczucie swobody i zaufanie do terapeuty.
-            </p>
-            <button class="btn"><a href="">Sprawdź szczegóły </a></button>
-          </div>
-        </div>
-        <div class="col-lg-12 col-xl-6 order-md-3 order-xl-3 order-lg-3 serv">
-          <div class="img-services">
+      </div>
+      <div class="row custom-services">
+
+        <div class="col-12 col-lg-12 col-xl-6 order-xl-1 serv">
+          <div class="img-services bottom">
             <img src="images/doctor-3464761_1280.jpg" alt="" class="img">
           </div>
         </div>
-        <div class="col-lg-12 col-xl-6 order-md-4 order-xl-4 order-lg-2 serv">
+        <div class="col-12 col-lg-12 col-xl-6  order-xl-2  serv">
           <div class="services-content-box bottom">
             <h3 class="header-services">
               Sesja o charakterze medycznym
@@ -197,28 +199,47 @@
             <p class="content-services">Sesja łączy imitacje kilku wizyt u różnych specjalistów. Wybierając ten pakiet
               przejdziesz z terapeutą relaksujące badanie wzroku, słuchu, skalpu, włosów, ciała przy użyciu realnych
               wyzwalaczy. To pozwoli Ci doświadczyć niesamowicie przyjemnych reakcji Twojego mózgu, które poczujesz w
-              całym ciele. Zrelaksujesz się, wyciszysz i zaskoczysz potencjałem własnego umysłu! Dopełnieniem sesji jest
+              całym ciele. Zrelaksujesz się, wyciszysz i zaskoczysz potencjałem własnego umysłu! Dopełnieniem sesji
+              jest
               masaż całego ciała za pomocą fizjoterapeutycznego masażera marki VITBERG</p>
-            <button class="btn"><a href="">Sprawdź szczegóły </a></button>
-          </div>
-        </div>
-        <div class="col-lg-12 col-xl-6 order-md-5 order-xl-6 order-lg-5 serv">
-          <div class="img-services bottom">
-            <img src="images/kid-2252145_1280.jpg" alt="" class="img">
+            <button class="btn"><a href="#medic">Sprawdź szczegóły </a></button>
           </div>
         </div>
       </div>
+      <div class="row custom-services">
+
+        <div class=" col-12 col-lg-12 col-xl-6 order-xl-2 serv ">
+          <div class="img-services">
+            <img src="images/kid-2252145_1280.jpg" alt="" class="img">
+          </div>
+        </div>
+        <div class="col-12 col-lg-12 col-xl-6  order-xl-1  last">
+          <div class="services-content-box">
+            <h3 class="header-services">
+              Sesja dla dzieci
+            </h3>
+            <p class="content-services">Dla naszych najmlodszych zabieganych i ciekawych świata mamy opcję, która jest
+              syntezą wybranych elementów pakietu kosmetycznego i medycznego. Stawiamy na wyzwalacze, które
+              zaciekawią,
+              zrelaksują i pomogą się dziecku wyciszyć. Każdy młodszy uczestnik ma zapewnione indywidualne podejście,
+              któro zwieksza u niego poczucie swobody i zaufanie do terapeuty.
+            </p>
+            <button class="btn"><a href="#child">Sprawdź szczegóły </a></button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
 
   <section class="prices" id="prices">
     <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
+      <div class="accordion-item" id="cosmetic">
         <h2 class="accordion-header" id="flush-headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Pakiet kosmetyczny
+            Pakiet kosmetyczny - szczegóły
           </button>
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
@@ -228,11 +249,11 @@
           </div>
         </div>
       </div>
-      <div class="accordion-item">
+      <div class="accordion-item" id="medic">
         <h2 class="accordion-header" id="flush-headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            Pakiet medyczny
+            Pakiet medyczny - szczegóły
           </button>
         </h2>
         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
@@ -242,11 +263,11 @@
           </div>
         </div>
       </div>
-      <div class="accordion-item">
+      <div class="accordion-item" id="child">
         <h2 class="accordion-header" id="flush-headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Pakiet dziecięcy
+            Pakiet dziecięcy - szczegóły
           </button>
         </h2>
         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
@@ -270,13 +291,14 @@
       <div class="form-box  flex-item">
         <h3>Skontaktuj się przez formularz lub bezpośrednio używając adresu <span> e-mail</span> lub <span> telefou
             kontaktowego</span> pod formularzem :)</h3>
-        <form action="https://formspree.io/f/xnqenpbo" method="POST" class="form">
+        <!-- <form action="https://formspree.io/f/xnqenpbo" method="POST" class="form">
           <label>Imie i nazwisko</label>
           <input type="text" name="name" class="name">
           <label>E-mail</label>
           <input type="email" name="email" class="email">
           <label>Wiadomość</label>
           <textarea name="massage" class="massage" cols="60" rows="4"></textarea>
+          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 
           <label for="service">Wybierz pakiet o który Cie interesuje </label>
           <select name="service" class="service" id="service">
@@ -286,16 +308,114 @@
             <option value="Jeszcze sie nie zdecydowałem/am">Jeszcze sie nie zdecydowałem/am</option>
           </select>
           <div class="g-recaptcha" data-sitekey="6LdR_VIpAAAAABoKFSI3MhqxmlPPkOFI8TGNq-Q6"></div>
+         <div class="g-recaptcha" data-sitekey="6LcaDOEcAAAAAMMMjj-8-BQorfN6X5DJIScfRuFz"></div> 
 
-          <button type="submit" class="submit">Wyślij</button>
+          <button type="submit" class="submit" data-sitekey="6LdR_VIpAAAAABoKFSI3MhqxmlPPkOFI8TGNq-Q6">Wyślij</button>
 
+        </form> -->
+
+
+        <form method="post" action="https://thegoodbrain.pl/forms/contact.php" id="myForm">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+      
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br>
+      
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea><br>
+      
+          <label for="package">Package:</label>
+          <select id="package" name="package" required>
+              <option value="basic">Basic</option>
+              <option value="standard">Standard</option>
+              <option value="premium">Premium</option>
+          </select><br>
+      
+          <input type="submit" value="Submit">
+
+          <div class="g-recaptcha" data-sitekey="6LfpeFYpAAAAAFQUYJVJPJNYE40NS21hykwN4-sk"></div>
+      </form>
+      
+
+      <div id="result"></div>
+        <!-- <form action="https://formspree.io/f/xnqenpbo" method="POST">
+          <input type="email" name="email" placeholder="email@example.com" />
+          <div class="g-recaptcha" data-sitekey="6LfpeFYpAAAAAFQUYJVJPJNYE40NS21hykwN4-sk"></div>
+          replace with your recaptcha SITE key not secret key
+          <br />
+          <input type="submit" value="Submit">
+        </form>
+
+        <script>
+          window.onload = function () {
+            var el = document.getElementById('g-recaptcha-response');
+            if (el) {
+              el.setAttribute('required', 'required');
+            }
+          }
+        </script> -->
+
+        <!-- <button onclick="captcha()" class="btn btn-primary">click me</button> -->
+        <!-- <script>
+          function captcha() {
+            grecaptcha.ready(function () {
+              grecaptcha.execute('6LdR_VIpAAAAABoKFSI3MhqxmlPPkOFI8TGNq-Q6', { action: 'submit' }).then(function (token) {
+                console.log(token);
+                const captchaHidden = document.getElementById('g-recaptcha-response')
+                captchaHidden.setAttribute('value', token)
+                // fetch("https://formspree.io/f/xnqenpbo", {
+                //   method: "POST",
+                //   dataType: "json",
+                //   data: {
+                //     email: "test@email.com",
+                //     message: "Hello world!",
+                //     service: "Pakiet dziecięcy",
+                //     "g-recaptcha-response": token
+                //   }
+                // })
+
+                // $.ajax({
+                //   url: "https://formspree.io/f/xnqenpbo",
+                //   method: "POST",
+                //   dataType: "json",
+                //   data: {
+                //     email: "test@email.com",
+                //     message: "Hello world!",
+                //     "g-recaptcha-response": token
+                //   },
+                //   success: () => {
+                //     alert("Done!")
+                //   },
+                //   error: (err) => {
+                //     alert("Something wrong!", err)
+                //   }
+                // });
+              });
+            });
+          }
+        </script> -->
+        <!-- <form action="" id="demo-form" onSubmit="onSubmit">
+          <label>Imie i nazwisko</label>
+          <input type="text" name="name" class="name">
+
+          <div class="g-recaptcha" data-sitekey="6LdR_VIpAAAAABoKFSI3MhqxmlPPkOFI8TGNq-Q6"></div>
+          <button class="g-recaptcha" data-sitekey="6LdR_VIpAAAAABoKFSI3MhqxmlPPkOFI8TGNq-Q6" data-callback='onSubmit'
+            data-action='submit'>Submit</button>
         </form>
         <p class="success"></p>
       </div>
 
 
 
-    </div>
+      <script>
+        function onSubmit(token) {
+          document.getElementById("demo-form").submit();
+        }
+      </script> -->
+
+
+      </div>
   </section>
 
 
@@ -316,6 +436,7 @@
 
   </footer>
 
+ 
 
   <!-- Optional JavaScript; choose one of the two! -->
 

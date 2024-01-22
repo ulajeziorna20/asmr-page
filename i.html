@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Ld_dVYpAAAAAOah_3TTw8ZQofW4wVpb1yQTGGcJ"></script>
+</head>
+
+<body>
+  <button onclick="captcha()" class="btn btn-primary">click me</button>
+  <script>
+    function captcha() {
+      grecaptcha.ready(function () {
+        grecaptcha.execute('6Ld_dVYpAAAAAOah_3TTw8ZQofW4wVpb1yQTGGcJ', { action: 'submit' }).then(function (token) {
+          $.ajax({
+            url: "https://formspree.io/f/mbjnlvvq",
+            method: "POST",
+            dataType: "json",
+            data: {
+              email: "test@email.com",
+              message: "Hello world!",
+              "g-recaptcha-response": token
+            },
+            success: () => {
+              alert("Done!")
+            },
+            error: (err) => {
+              alert("Something wrong!", err)
+            }
+          });
+        });
+      });
+    }
+  </script>
+  <html>
+
+
+  <!-- <html>
+  <head>
+      <script src="https://www.google.com/recaptcha/api.js?render=6Ld_dVYpAAAAAOah_3TTw8ZQofW4wVpb1yQTGGcJ"></script>
+      <script>
+          grecaptcha.ready(function () {
+              grecaptcha.execute('6Ld_dVYpAAAAAOah_3TTw8ZQofW4wVpb1yQTGGcJ', {action: 'submit'}).then(function (token) {
+                  console.info("got token: " + token);
+                  document.getElementById('g-recaptcha-response').value = token;
+              });
+          });
+      </script>
+  </head>
+  <body>
+      <form action="https://formspree.io/f/mbjnlvvq" method="POST">
+          <input name="email" type="email">
+          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+          <input type="submit" class="btn btn-primary" value="submit"/>
+      </form>
+  </body>
+<html> -->

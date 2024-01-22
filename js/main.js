@@ -1,50 +1,41 @@
-let form = document.querySelector('.form')
+document.addEventListener('DOMContentLoaded', function () {
+
+  console.log(document.querySelector('#myForm'));
+  console.log("jestem form");
 
 
-form.addEventListener('submit', function (event) {
-  // Zapobiegnij domyślnemu zachowaniu formularza (przekierowaniu)
-  event.preventDefault();
+  document.querySelector('#myForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-  console.log(event);
+    // Your existing AJAX form submission code using vanilla JavaScript
+    var xhr = new XMLHttpRequest();
+    var formData = new FormData(this);
 
-  let recaptchaResponse = grecaptcha.getResponse();
-  if (!recaptchaResponse) {
-    alert('Proszę potwierdzić, że nie jesteś robotem.');
-    return;
-  }
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var response = JSON.parse(xhr.responseText);
 
+          if (response.success) {
+            // Update content on success
+            document.getElementById('result').innerHTML =
+              'Email: ' + response.data.email + '<br>' +
+              'Name: ' + response.data.name + '<br>' +
+              'Message: ' + response.data.message + '<br>' +
+              'Package: ' + response.data.package + '<br>' +
+              'Message: ' + response.message;
+          } else {
+            // Display error message
+            alert(response.message);
+          }
+        } else {
+          // Handle HTTP error
+          alert('An error occurred during form submission.');
+        }
+      }
+    };
 
-  // Wyślij dane do Formspree za pomocą Fetch API lub innej metody
-  // Przykład z użyciem Fetch:
-  fetch(event.target.action, {
-    method: form.method,
-    mode: "cors",
-    body: new FormData(event.target),
-    headers: {
-      'Accept': 'application/json'
-    }
-  })
-    .then(response => {
-      // Obsłuż odpowiedź, na przykład pokaż komunikat o sukcesie na stronie
-      let nameInp = document.querySelector('.name')
-      let emailInp = document.querySelector('.email')
-      let massageInp = document.querySelector('.massage')
-      let selectInp = document.querySelector('.service')
-
-      nameInp.value = ''
-      emailInp.value = ''
-      massageInp.value = ''
-      selectInp.value = ''
-
-
-      let massSucc = document.querySelector('.success')
-      massSucc.innerText = "Sukces! Jak najszybciej skontaktujemy sie z Tobą :) "
-
-
-
-    })
-    .catch(error => {
-      // Obsłuż błędy, na przykład pokaż komunikat o błędzie na stronie
-      console.error('Wystąpił błąd podczas wysyłania danych:', error);
-    });
+    xhr.open('POST', '../forms/contact.php', true);
+    xhr.send(formData);
+  });
 });
