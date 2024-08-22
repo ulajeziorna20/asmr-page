@@ -201,7 +201,7 @@ body {
 
 .main-header-services {
   text-align: center;
-  padding-top: 120px;
+  padding: 5rem;
   color: rgba(92, 150, 187, 255);
   font-size: 2.6em;
   font-weight: bold;
@@ -213,9 +213,9 @@ body {
   padding-bottom: 3.5rem;
 }
 
-.img-services.top {
+/* .img-services.top {
   margin-top: 100px;
-}
+} */
 
 
 .last {
@@ -232,15 +232,20 @@ body {
 
 
 
-.services-content-box {
-  /* margin-top: 100px; */
-  height: 70%;
+.serv {
   transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.services-content-box:hover {
+.serv:hover {
   box-shadow: 0 0 70px rgb(255, 255, 255);
 }
+
+/* .services-content-box {
+  paddi
+} */
 
 
 .row.custom-services {
@@ -248,7 +253,7 @@ body {
 }
 
 .row.custom-services .serv{
-  margin: auto;
+  /* margin: auto; */
 }
 
 .services-content-box .btn {
@@ -563,8 +568,6 @@ footer {
     width: auto;
     height: 100%;
     padding-bottom: 30px;
-    /* margin-bottom: 50px; */
-    /* max-width: 500px; */
   }
 
   .content-services {
